@@ -1,0 +1,4 @@
+TareasHaskell
+=============
+
+Matematicas Discretas
