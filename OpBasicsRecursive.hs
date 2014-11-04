@@ -25,7 +25,7 @@ restaRecursiva x y
      |otherwise = restaRecursiva (x - y) y
 
 --Cociente de forma recursiva
-cociente :: Integer -> Integer -> Integer
+cociente :: Int -> Int -> Int
 cociente x y
     |x < y = 0
     |otherwise = 1 + cociente (x - y) y
@@ -35,8 +35,14 @@ Función recursiva que calcula el producto de los números que hay entre el
 primer y segundo argumento, ambos incluidos.
 -}
 
-productoIntervalo :: Integer -> Integer -> Integer
+productoIntervalo :: Int -> Int -> Int
 productoIntervalo a b
     |a < b = a * productoIntervalo (a + 1) b
     |a == b = b
     |otherwise = error "el primer argumento es mayor que el segundo"
+
+
+-- x elevado a n usando recursividad
+potencia :: Int -> Int -> Int
+potencia m 0 = 1
+potencia m n = m * (potencia m (n - 1))
