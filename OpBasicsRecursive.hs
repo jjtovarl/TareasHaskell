@@ -9,3 +9,34 @@ un valor de tipo Int cuando llega al paso base.-}
 sumaHastaN::Int -> Int
 sumaHastaN n | n == 1 = 1
     |otherwise =n + sumaHastaN (n-1)
+
+--Función recursiva que devuelve la sumatoria desde un valor entero hasta otro.
+sumatoria :: Integer -> Integer -> Integer
+sumatoria a b
+    |a < b = a + sumatoria (a + 1) b
+    |a == b = b
+    |otherwise = error "el primer argumento es mayor que el segundo"
+
+
+--Resta recursiva
+restaRecursiva :: Int -> Int -> Int
+restaRecursiva x y
+     |x < y = x
+     |otherwise = restaRecursiva (x - y) y
+
+--Cociente de forma recursiva
+cociente :: Integer -> Integer -> Integer
+cociente x y
+    |x < y = 0
+    |otherwise = 1 + cociente (x - y) y
+
+{-
+Función recursiva que calcula el producto de los números que hay entre el
+primer y segundo argumento, ambos incluidos.
+-}
+
+productoIntervalo :: Integer -> Integer -> Integer
+productoIntervalo a b
+    |a < b = a * productoIntervalo (a + 1) b
+    |a == b = b
+    |otherwise = error "el primer argumento es mayor que el segundo"
