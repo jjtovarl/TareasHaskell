@@ -1,0 +1,1 @@
+data Rose a = Bud a | Br [Rose a] deriving (Eq,Show)rose :: Rose Introse = Br [Bud 1, Br [Bud 2, Bud 3, Br [Bud 4, Bud 5, Bud 6]]]

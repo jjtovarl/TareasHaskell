@@ -1,0 +1,1 @@
+data Tree = Lf | Nd Int Tree Tree deriving Showdata Tr a = Nil | T a (Tr a) (Tr a) deriving (Eq,Show)data LeafTree a = Leaf a | Node (LeafTree a) (LeafTree a)						deriving Showltree :: LeafTree Stringltree = Node    (Leaf "I")    (Node       (Leaf "love")       (Leaf "you"))
