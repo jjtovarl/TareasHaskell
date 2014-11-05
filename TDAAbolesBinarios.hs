@@ -1,0 +1,1 @@
+data Arbol = Hoja Int | Nodo Arbol Int Arbol    deriving (Show, Eq){-Ejemplo Uno del Arbol-}ejArbol :: ArbolejArbol = Nodo (Nodo (Hoja 1) 3 (Hoja 4)) 5 (Nodo (Hoja 6) 7 (Hoja 9)){- 8.3.1 Ocurrencia de un elementeo en el arbol-}ocurre :: Int -> Arbol -> Boolocurre m (Hoja n)  = m == nocurre m (Nodo i n d) = m == n || ocurre m i || ocurre m d
